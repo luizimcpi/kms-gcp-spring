@@ -1,0 +1,12 @@
+### Variables 
+@apiurl = http://localhost:8080
+
+### POST create secret
+POST {{apiurl}}/secrets HTTP/1.1
+Content-Type: application/json
+
+{
+   "id":"uuid-qualquer",
+   "key":"API_TOKEN",
+   "value":"para ser criptografado"
+}
