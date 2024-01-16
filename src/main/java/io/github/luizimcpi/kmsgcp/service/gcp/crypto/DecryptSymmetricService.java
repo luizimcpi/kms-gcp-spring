@@ -2,6 +2,7 @@ package io.github.luizimcpi.kmsgcp.service.gcp.crypto;
 
 import java.io.IOException;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.google.cloud.kms.v1.CryptoKeyName;
@@ -11,12 +12,20 @@ import com.google.protobuf.ByteString;
 
 @Service
 public class DecryptSymmetricService {
+  
+    @Value("${gcp.kms.projectId}")
+    private String projectId;
+
+    @Value("${gcp.kms.locationId}")
+    private String locationId;
+
+    @Value("${gcp.kms.keyRingId}")
+    private String keyRingId;
+
+    @Value("${gcp.kms.keyId}")
+    private String keyId;
     
     public String decryptSymmetric(byte[] ciphertext) throws IOException {
-        String projectId = "peppy-sensor-411115";
-        String locationId = "global";
-        String keyRingId = "spring-keyring";
-        String keyId = "symetric-encryption-key";
         return decryptSymmetric(projectId, locationId, keyRingId, keyId, ciphertext);
     }
 
