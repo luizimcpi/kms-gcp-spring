@@ -32,14 +32,15 @@
 		
 		<dependency>
 			<groupId>com.google.cloud</groupId>
-			<artifactId>google-cloud-kms</artifactId>
+			<artifactId>spring-cloud-gcp-starter-kms</artifactId>
+			<version>5.0.0</version>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-gcp-starter</artifactId>
 			<version>1.2.8.RELEASE</version>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -53,17 +54,17 @@
 		</dependency>
 	</dependencies>
 
-	<dependencyManagement>
+	<!-- <dependencyManagement>
 		<dependencies>
 			<dependency>
-			<groupId>com.google.cloud</groupId>
-			<artifactId>libraries-bom</artifactId>
-			<version>26.29.0</version>
-			<type>pom</type>
-			<scope>import</scope>
+				<groupId>com.google.cloud</groupId>
+				<artifactId>spring-cloud-gcp-dependencies</artifactId>
+				<version>4.9.0</version>
+				<type>pom</type>
+				<scope>import</scope>
 			</dependency>
 		</dependencies>
-	</dependencyManagement>
+	</dependencyManagement> -->
 
 	<build>
 		<plugins>

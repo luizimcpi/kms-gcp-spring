@@ -39,8 +39,7 @@ public class SecretService {
             secret.setPartnerId(request.partnerId());
             secret.setKey(request.key());
             secret.setValue(encryptedValue);
-            // decryptSymmetricService.decryptSymmetric(encryptedKey);
-            // decryptSymmetricService.decryptSymmetric(encryptedValue);
+      
             secretRepository.save(secret);
         } catch (Exception e) {
            log.error("Can't create secret: {}", e.getMessage());

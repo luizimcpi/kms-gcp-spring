@@ -13,7 +13,7 @@ import com.google.protobuf.ByteString;
 @Service
 public class DecryptSymmetricService {
   
-    @Value("${gcp.kms.projectId}")
+    @Value("${spring.cloud.gcp.project-id}")
     private String projectId;
 
     @Value("${gcp.kms.locationId}")
