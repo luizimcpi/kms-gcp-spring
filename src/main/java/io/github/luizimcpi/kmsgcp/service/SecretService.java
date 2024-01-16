@@ -1,6 +1,5 @@
 package io.github.luizimcpi.kmsgcp.service;
 
-import java.io.IOException;
 import java.util.Objects;
 import java.util.Optional;
 
