@@ -6,7 +6,10 @@ POST {{apiurl}}/secrets HTTP/1.1
 Content-Type: application/json
 
 {
-   "id":"uuid-qualquer",
+   "partnerId":"uuid-qualquer",
    "key":"API_TOKEN",
    "value":"para ser criptografado"
 }
+
+### GET secret by partnerId and token
+GET {{apiurl}}/secrets/uuid-qualquer/API_TOKEN HTTP/1.1

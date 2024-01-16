@@ -9,14 +9,10 @@ import com.google.cloud.kms.v1.DecryptResponse;
 import com.google.cloud.kms.v1.KeyManagementServiceClient;
 import com.google.protobuf.ByteString;
 
-import lombok.extern.slf4j.Slf4j;
-
 @Service
-@Slf4j
 public class DecryptSymmetricService {
     
     public String decryptSymmetric(byte[] ciphertext) throws IOException {
-        // TODO(developer): Replace these variables before running the sample.
         String projectId = "peppy-sensor-411115";
         String locationId = "global";
         String keyRingId = "spring-keyring";
@@ -39,7 +35,6 @@ public class DecryptSymmetricService {
 
       // Decrypt the response.
       DecryptResponse response = client.decrypt(keyName, ByteString.copyFrom(ciphertext));
-      log.info("Plaintext: {}", response.getPlaintext().toStringUtf8());
       return response.getPlaintext().toStringUtf8();
     }
   }
